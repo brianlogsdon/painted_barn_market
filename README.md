@@ -1,4 +1,4 @@
-# painted_barn_market
+# Painted Barn Market
 Online marketplace that is being built for The Painted Barn Market in Lafayette, NJ. 
 
 Tech Stack
