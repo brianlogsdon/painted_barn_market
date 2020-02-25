@@ -9,8 +9,9 @@ position: inline-block;
   flex-direction: column;
   
 img {
+    
     float: left;
-    width: 40%;
+    width: 60%;
     height: 400px;
     object-fit: cover;
     @media  (max-width:800px) //800px for tablets and phones.
@@ -23,8 +24,8 @@ img {
 }
   }
 h3 {
-    width: 50%;
-    height: 400px;
+    width: 30%;
+    
     float: right;
     padding: 3px;
     @media  (max-width:800px) //800px for tablets and phones.

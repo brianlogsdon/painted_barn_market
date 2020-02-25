@@ -5,11 +5,13 @@ import Router from 'next/router';
 import Form from './styles/Form';
 import formatMoney from '../lib/formatMoney';
 import Error from './ErrorMessage';
+import { SingleFieldSubscriptions } from 'graphql/validation/rules/SingleFieldSubscriptions';
 
 const CREATE_ITEM_MUTATION = gql`
   mutation CREATE_ITEM_MUTATION(
     $title: String!
     $description: String!
+    $category: String!
     $price: Int!
     $image: String
     $largeImage: String
@@ -17,6 +19,7 @@ const CREATE_ITEM_MUTATION = gql`
     createItem(
       title: $title
       description: $description
+      category: $category
       price: $price
       image: $image
       largeImage: $largeImage
@@ -28,11 +31,12 @@ const CREATE_ITEM_MUTATION = gql`
 
 class CreateItem extends Component {
   state = {
-    title: 'Cool Shoes',
-    description: 'I love those shoes',
-    image: 'dog.jpg',
-    largeImage: 'large-dog.jpg',
-    price: 1000,
+    title: '',
+    description: '',
+    category:'',
+    image: '',
+    largeImage: '',
+    price: 0,
   };
   handleChange = e => {
     const { name, type, value } = e.target;
@@ -93,6 +97,24 @@ class CreateItem extends Component {
                 )}
               </label>
 
+              <label htmlFor="title">
+                Category
+                <select
+                  type="text"
+                  id="category"
+                  name="category"
+                  placeholder="Category"
+                  required
+                  value={this.state.category}
+                  onChange={this.handleChange}
+                >
+                  <option value="" disabled selected>Select the category</option>
+                <option value="signs">signs</option>
+                <option value="mugs">mugs</option>
+                <option value="clothes">clothes</option>
+                <option value="paint">paint</option></select>
+              </label>
+    
               <label htmlFor="title">
                 Title
                 <input

@@ -1291,7 +1291,7 @@ function (_React$Component) {
         }, function (client) {
           return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", _extends({}, getInputProps({
             type: 'search',
-            placeholder: 'Search For An Item',
+            placeholder: ' 🔎 Search',
             id: 'search',
             className: _this2.state.loading ? 'loading' : '',
             onChange: function onChange(e) {
@@ -1759,7 +1759,7 @@ var glow = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])([
 var SearchStyles = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "DropDown__SearchStyles",
   componentId: "n5d97g-2"
-})(["position:relative;input{width:100%;padding:10px;border:0;font-size:2rem;&.loading{animation:", " 0.5s ease-in-out infinite alternate;}}"], glow);
+})(["position:relative;input{width:100%;padding:10px;border:0;font-size:2.5rem;&.loading{animation:", " 0.5s ease-in-out infinite alternate;}}"], glow);
 
 
 /***/ }),

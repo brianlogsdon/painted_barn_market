@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HomeStyle from './styles/HomeStyle';
-
+import ShopByDepartment from './styles/ShopByDepartment';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import Title from './styles/Title';
@@ -17,19 +17,39 @@ class HomePage extends Component {
 
   render() {
     return(
- 
+ <div>
   <HomeStyle>    
   <div >
     <div >
-      <img  src="https://i.pinimg.com/originals/a3/40/a1/a340a19500dd6abcc59bf1c270a70226.jpg" alt="First slide"></img>
+      <img  src="/static/sleds.jpg" alt="First slide"></img>
     </div>
     <div>
-    <h3>Lorem ipsum dolor sit amet, ei nam ferri volumus praesent, quo ut solum ubique conclusionemque. Et euismod tacimates prodesset sea, vel quem nibh possit no. Inani constituam id duo, ut quo vitae discere.</h3>
+    <h3>The “Painted Barn Market” was created from a love of painting furniture and looking for a creative outlet.  I discovered chalk and milk paints, fell in love with them, and the rest is history. </h3>
     
     </div>
-    
+   
 </div>
- </HomeStyle>
+</HomeStyle>
+
+<ShopByDepartment>
+
+<div>
+<hr/>
+      <h1> Shop by Department</h1>
+      <div className= "imageGroup">
+      <img src="/static/sign.jpg" alt="First slide" />
+      <img src="/static/clothes.jpg "alt="First slide" />
+      <img src="/static/mugs.jpg "alt="First slide" />
+      <img src="/static/paint.jpg"alt="First slide" />
+      
+     </div>
+     
+      
+      
+
+    </div>
+    </ShopByDepartment>
+ </div>
     );
   }
 }
